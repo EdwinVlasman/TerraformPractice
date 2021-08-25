@@ -14,7 +14,7 @@ pipeline {
         TF_IN_AUTOMATION = "TRUE"
         TF_VAR_consul_address = "host.docker.internal"
         TF_LOG = "WARN"
-        CONSUL_HTTP_TOKEN = credentials('applications_consul_token')
+        CONSUL_HTTP_TOKEN = credentials('networking_consul_token')
         AWS_ACCESS_KEY_ID = credentials('aws_access_key')
         AWS_SECRET_ACCESS_KEY = credentials('aws_secret_access_key')
         PATH = "$TF_HOME:$PATH"
